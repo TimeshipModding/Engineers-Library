@@ -61,15 +61,17 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { // CurseMaven
-        url = "https://www.cursemaven.com"
-    }
+    maven { url 'https://jitpack.io' } // JitPack
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    // Jitpack Location
+    implementation 'com.github.timeshipmodding:Engineers-Library:Forge-1.20.1snap-v0.01'
 }
 
+// gradle.properties Entries
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
             // Minecraft Versions
