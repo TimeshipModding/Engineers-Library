@@ -61,14 +61,14 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { url 'https://jitpack.io' } // JitPack
+    maven { url 'https://jitpack.io' } // JitPack Maven
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    // Jitpack Location
-    implementation 'com.github.timeshipmodding:Engineers-Library:Forge-1.20.1snap-v0.01'
+    // File Location for JitPack
+    implementation 'com.github.timeshipmodding:Engineers-Library:Forge-1.20.1snap-v0.02'
 }
 
 // gradle.properties Entries
