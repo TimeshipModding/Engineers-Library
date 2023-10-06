@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
 version = "forge-${minecraft_version}${version_suffix}${mod_version}"
@@ -61,14 +62,11 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { url 'https://jitpack.io' } // JitPack Maven
 }
 
 dependencies {
+    // Forge Dependency
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-
-    // File Location for JitPack
-    implementation 'com.github.TimeshipModding:Engineers-Library:Forge-1.20.1~dev-SNAPSHOT'
 }
 
 // gradle.properties Entries
